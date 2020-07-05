@@ -1,0 +1,9 @@
+# package files
+/node_modules
+
+# build
+/dist
+
+# sensitive information files
+*.env
+*.db
