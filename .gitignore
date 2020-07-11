@@ -6,4 +6,4 @@
 
 # sensitive information files
 *.env
-*.db
+*.sqlite3
