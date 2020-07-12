@@ -22,7 +22,7 @@ export const fetchAnalyzedStocks = (
     db.serialize(() => {
       db.all(
         `
-        SELECT * FROM ${TBL_ANALYZED_DATA} WHERE continuous_days >= 2 AND DATE(created_at) == '${year}-${month}-${day}';
+        SELECT DISTINCT * FROM ${TBL_ANALYZED_DATA} WHERE continuous_days >= 2 AND DATE(created_at) == '${year}-${month}-${day}';
         `,
         [],
         (err: any, rows: any) => {
